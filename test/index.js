@@ -1,13 +1,14 @@
-const build = require('./server')
-const model = require('./model')
-const code = require('code')
-const labLib = require('lab')
+// import { build } from './server.js'
+// import { model } from './model.js'
+// import { expect } from '@hapi/code'
+// import * as lab from '@hapi/lab';
 
-const lab = (exports.lab = labLib.script())
-const describe = lab.describe
-const before = lab.before
-const it = lab.it
-const expect = code.expect
+const { expect } = require('@hapi/code')
+const Lab = require('@hapi/lab')
+const { model } = require('./model')
+const { build } = require('./server')
+
+const { describe, before, it } = exports.lab = Lab.script()
 
 describe('Hapi oauth2 server', () => {
   let server

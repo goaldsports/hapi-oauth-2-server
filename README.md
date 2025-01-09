@@ -1,9 +1,8 @@
 # hapi-oauth2-server-plugin [![Build Status](https://travis-ci.org/getapper/hapi-oauth-2-server.svg?branch=master)](https://travis-ci.org/getapper/hapi-oauth-2-server)
 
-
 Complete, compliant and well tested module for implementing an OAuth2 Server/Provider with [hapi](https://github.com/hapijs/hapi) in [node.js](http://nodejs.org/).
 
-This is the hapi wrapper for [oauth2-server](https://github.com/oauthjs/node-oauth2-server).
+This is the hapi wrapper for [@node-oauth/oauth2-server](https://github.com/node-oauth/node-oauth2-server).
 
 ## Installation
 
@@ -90,4 +89,4 @@ The repository offers also an out-of-the-box example and unit tests inside the `
 
 ## What's next
 
-Starting from this you can adapt it to your current authentication and authorization Hapi plugin or create your own by wrapping it as well in a new one. 
+Starting from this you can adapt it to your current authentication and authorization Hapi plugin or create your own by wrapping it as well in a new one.

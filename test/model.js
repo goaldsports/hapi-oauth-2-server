@@ -1,6 +1,7 @@
-const moment = require('moment')
+// import moment from 'moment';
+const moment = require('moment');
 
-module.exports = {
+exports.model = {
   getAccessToken: async () => {
     return { user: {}, accessTokenExpiresAt: moment().add(3, 'days').toDate() }
   },
@@ -8,7 +9,7 @@ module.exports = {
     return {
       code: 'be6e365e9f29c19e631078e8e376326bdf086576',
       expiresAt: moment().add(3, 'days').toDate(),
-      scope: 'test',
+      scope: ['test'],
       client: { id: 'test' },
       user: {}
     };
