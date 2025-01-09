@@ -27,11 +27,11 @@ To use it you just need to register it like every Hapi plugin
   });
 ```
 
-where model is a [oauth2-server model object](https://oauth2-server.readthedocs.io/en/latest/model/overview.html).
+where model is a [oauth2-server model object](https://node-oauthoauth2-server.readthedocs.io/en/master/model/overview.html).
 
-The plugin decorates Hapi requests with a `oauth` object that contains the 3 oauth2-server main methods [authenticate](https://oauth2-server.readthedocs.io/en/latest/api/oauth2-server.html?highlight=grant_type#authenticate-request-response-options-callback), [authorize](https://oauth2-server.readthedocs.io/en/latest/api/oauth2-server.html?highlight=grant_type#authorize-request-response-options-callback) and [token](https://oauth2-server.readthedocs.io/en/latest/api/oauth2-server.html?highlight=grant_type#token-request-response-options-callback).
+The plugin decorates Hapi requests with a `oauth` object that contains the 3 oauth2-server main methods [authenticate](https://node-oauthoauth2-server.readthedocs.io/en/latest/api/oauth2-server.html#authenticate-request-response-options), [authorize](https://node-oauthoauth2-server.readthedocs.io/en/latest/api/oauth2-server.html#authorize-request-response-options) and [token](https://node-oauthoauth2-server.readthedocs.io/en/latest/api/oauth2-server.html#token-request-response-options).
 
-The methods accept an Hapi request object and an optional options object and return what the original and respective oauth2-server method provides.
+The methods accept an Hapi request object and an optional options object and return what the original and respective node-oauth2-server method provides.
 
 Here follows a quick and easy example:
 
