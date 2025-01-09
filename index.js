@@ -1,10 +1,14 @@
+// import Joi from 'joi'
+// import * as OAuth2Server from '@node-oauth/oauth2-server'
+// import { Request, Response } from '@node-oauth/oauth2-server'
+
 const Joi = require('joi')
-const OAuth2Server = require('oauth2-server')
-const Request = require('oauth2-server').Request
-const Response = require('oauth2-server').Response
+const OAuth2Server = require('@node-oauth/oauth2-server')
+const { Request, Response } = require('@node-oauth/oauth2-server')
 
 const fromHapiReq = req => {
   const { method, payload, ...other } = req
+  // console.log('other: ', other)
   return new Request({
     method: method.toUpperCase(),
     body: payload,
@@ -15,9 +19,14 @@ const fromHapiReq = req => {
 exports.plugin = {
   pkg: require('./package.json'),
   register: async function (server, options) {
-    await Joi.validate(options, Joi.object().keys({
+    const schema = Joi.object().keys({
       model: Joi.object().required()
-    }))
+    })
+
+    const { error } = schema.validate(options)
+    if (error) {
+      throw error
+    }
 
     const oauthServer = new OAuth2Server(options)
 

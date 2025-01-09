@@ -1,8 +1,11 @@
-const Hapi = require('hapi')
-const HapiOAuth2Server = require('../')
+// import { Server } from '@hapi/hapi'
+// import * as HapiOAuth2Server from '../index.js'
 
-module.exports = async model => {
-  const server = Hapi.server({
+const { Server } = require('@hapi/hapi')
+const HapiOAuth2Server = require('../index.js')
+
+exports.build = async model => {
+  const server = Server({
     port: 3000,
     host: 'localhost'
   })
