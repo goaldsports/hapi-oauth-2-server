@@ -1,6 +1,3 @@
-// import { Server } from '@hapi/hapi'
-// import * as HapiOAuth2Server from '../index.js'
-
 const { Server } = require('@hapi/hapi')
 const HapiOAuth2Server = require('../index.js')
 

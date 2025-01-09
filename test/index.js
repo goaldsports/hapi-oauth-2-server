@@ -1,8 +1,3 @@
-// import { build } from './server.js'
-// import { model } from './model.js'
-// import { expect } from '@hapi/code'
-// import * as lab from '@hapi/lab';
-
 const { expect } = require('@hapi/code')
 const Lab = require('@hapi/lab')
 const { model } = require('./model')

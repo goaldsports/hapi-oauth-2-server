@@ -1,14 +1,9 @@
-// import Joi from 'joi'
-// import * as OAuth2Server from '@node-oauth/oauth2-server'
-// import { Request, Response } from '@node-oauth/oauth2-server'
-
 const Joi = require('joi')
 const OAuth2Server = require('@node-oauth/oauth2-server')
 const { Request, Response } = require('@node-oauth/oauth2-server')
 
 const fromHapiReq = req => {
   const { method, payload, ...other } = req
-  // console.log('other: ', other)
   return new Request({
     method: method.toUpperCase(),
     body: payload,
